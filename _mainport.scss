@@ -1,0 +1,106 @@
+.main {
+  border-top: 1px solid #ECECEC;
+  padding-bottom: 94px;
+
+  &_buttons {
+    max-width: 575px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    &--button {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 16px;
+      background: #F5F4FA;
+      padding: 6px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      border: none;
+
+      &:hover {
+        background: #2196F3;
+        color: white;
+      }
+    }
+  }
+
+  &_cards {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &--card {
+      max-width: 370px;
+      border: 1px solid #EEE;
+      margin-top: 30px;
+      position: relative;
+
+      &:hover {
+        box-shadow:
+          1px 4px 6px #00000029,
+          0px 4px 4px #0000000F,
+          0px 1px 1px #0000001F;
+
+        .main_cards--card--blue {
+          opacity: 1;
+          background: #2196F3E5;
+          transform: translateY(-40px);
+        }
+
+        .main_cards--card--blue--text {
+          opacity: 1;
+        }
+      }
+
+      &--photo {
+        width: 100%;
+        height: 294px;
+        object-fit: cover;
+      }
+
+      &--blue {
+        width: 370px;
+        height: 294px;
+        transition: 500ms ease-out;
+        z-index: 10;
+        background-color: #2196F3;
+        opacity: 0;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+
+        &--text {
+          font-family: Roboto;
+          font-size: 18px;
+          padding: 63px 24px;
+          color: white;
+          opacity: 0;
+          transition: 500ms ease-in-out;
+        }
+      }
+
+      &--box--title {
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 20px 0 4px 24px;
+        color: #212121;
+      }
+
+      &--box--text {
+        font-family: Roboto;
+        font-size: 16px;
+        color: #757575;
+        margin: 0 0 20px 24px;
+      }
+    }
+  }
+}

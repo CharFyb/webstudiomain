@@ -2,6 +2,9 @@ const overlay = document.getElementById('overlay');
 const openBtn = document.getElementById('openModal');
 const closeBtn = document.getElementById('closeModal');
 const okBtn = document.getElementById('okBtn');
+const burgerBtn = document.querySelector('.header_burger');
+const burgerModal = document.getElementById('burgerModal');
+const closeBurgerModalBtn = document.getElementById('closeBurgerModal');
 
 let lastFocusedEl = null;
 
@@ -22,9 +25,36 @@ function closeModal() {
     if (lastFocusedEl) lastFocusedEl.focus();
 }
 
-openBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-okBtn.addEventListener('click', closeModal);
+function openBurgerModal() {
+    // save focus and show burger modal
+    lastFocusedEl = document.activeElement;
+    if (burgerModal) {
+        burgerModal.classList.add('burger-modal--active');
+        document.body.classList.add('no-scroll');
+        // focus close button if present
+        if (closeBurgerModalBtn) closeBurgerModalBtn.focus();
+    }
+}
+
+function closeBurgerModal() {
+    if (burgerModal) {
+        burgerModal.classList.remove('burger-modal--active');
+    }
+    document.body.classList.remove('no-scroll');
+    if (lastFocusedEl) lastFocusedEl.focus();
+}
+
+// attach listeners safely (page may not contain all elements)
+if (openBtn) openBtn.addEventListener('click', openModal);
+if (burgerBtn) burgerBtn.addEventListener('click', openBurgerModal);
+if (closeBtn) closeBtn.addEventListener('click', closeModal);
+if (okBtn) okBtn.addEventListener('click', closeModal);
+if (closeBurgerModalBtn) closeBurgerModalBtn.addEventListener('click', closeBurgerModal);
+if (burgerModal) {
+    burgerModal.addEventListener('click', (e) => {
+        if (e.target === burgerModal) closeBurgerModal();
+    });
+}
 
 // клик по фону — закрыть
 overlay.addEventListener('click', (e) => {
@@ -33,7 +63,13 @@ overlay.addEventListener('click', (e) => {
 
 // Esc — закрыть
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('show')) {
-        closeModal();
+    if (e.key === 'Escape') {
+        if (overlay.classList.contains('show')) {
+            closeModal();
+        }
+        if (burgerModal.classList.contains('burger-modal--active')) {
+            closeBurgerModal();
+        }
     }
 });
+

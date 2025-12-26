@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/portfol.css">
+    <link rel="stylesheet" href="./portfolio.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
             <img class="header_logo--photo" src="./img/WebStudio (1).png" alt="WebStudio">
             <nav class="header_logo--navig">
                 <div class="header_logo--navig--box">
-                    <a class="header_logo--navig--box--link" href="./index.html">Студія</a>
+                    <a class="header_logo--navig--box--link" href="#">Студія</a>
                     <div class="header_logo--navig--box--one"></div>
                 </div>
                 <div class="header_logo--navig--box">
@@ -49,8 +49,49 @@
                 </svg>
                 <a class="header_link--box--contact" href="#">+38 096 111 11 11</a>
             </div>
+
         </div>
+        <button class="header_burger">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8 14.6667V12H32V14.6667H8ZM8 21.3333H32V18.6667H8V21.3333ZM8 28H32V25.3333H8V28Z"
+                    fill="black" />
+            </svg>
+        </button>
+
+
     </header>
+
+    <div id="burgerModal" class="burger-modal">
+        <button id="closeBurgerModal" class="burger-modal__close">✕</button>
+        <nav class="burger-modal_nav">
+            <a class="burger-modal_nav--link" href="#">Студія</a>
+            <a class="burger-modal_nav--link" href="#">Портфоліо</a>
+            <a class="burger-modal_nav--link" href="#">Контакти</a>
+        </nav>
+        <div class="burger-modal_box">
+            <div class="burger-modal_box--contact">
+                <a class="burger-modal_box--contact--number" href="#">+38 096 111 11 11</a>
+                <a class="burger-modal_box--contact--link" href="#">info@devstudio.com</a>
+            </div>
+            <div class="burger-modal_box--social">
+                <a class="burger-modal_box--social--link" href="#">Instagram</a>
+                <svg width="1" height="22" viewBox="0 0 1 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.5" x2="0.5" y2="22" stroke="#212121" stroke-opacity="0.2" />
+                </svg>
+                <a class="burger-modal_box--social--link" href="#">Twitter</a>
+                <svg width="1" height="22" viewBox="0 0 1 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.5" x2="0.5" y2="22" stroke="#212121" stroke-opacity="0.2" />
+                </svg>
+                <a class="burger-modal_box--social--link" href="#">Facebook</a>
+                <svg width="1" height="22" viewBox="0 0 1 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.5" x2="0.5" y2="22" stroke="#212121" stroke-opacity="0.2" />
+                </svg>
+                <a class="burger-modal_box--social--link" href="#">LinkedIn</a>
+            </div>
+        </div>
+
+    </div>
     <main>
         <section class="main">
             <div class="main_buttons">
@@ -176,16 +217,16 @@
         <div class="footer_conteiner">
             <div class="footer_conteiner--box">
                 <img class="footer_conteiner--box--logo" src="./img/WebStudio.png" alt="WebStudio">
-                <a class="footer_conteiner--box--logo--address" href="#">м. Київ, пр-т Лесі Українки, 26</a>
-                <a class="footer_conteiner--box--logo--nav" href="#">info@devstudio.com</a>
-                <a class="footer_conteiner--box--logo--nav" href="#">+38 096 111 11 11</a>
+                <a class="footer_conteiner--box--address" href="#">м. Київ, пр-т Лесі Українки, 26</a>
+                <a class="footer_conteiner--box--nav" href="#">info@devstudio.com</a>
+                <a class="footer_conteiner--box--nav" href="#">+38 096 111 11 11</a>
             </div>
             <div class="footer_conteiner--join">
-                <p class="footer_conteiner--join_title">приєднуйтесь</p>
-                <div class="footer_conteiner--join_contact">
-                    <div class="footer_conteiner--join_contact--box">
-                        <svg class="footer_conteiner--join_contact--box--svg" width="44" height="44" viewBox="0 0 44 44"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                <p class="footer_conteiner--join--title">приєднуйтесь</p>
+                <div class="footer_conteiner--join--contact">
+                    <div class="footer_conteiner--join--contact--box">
+                        <svg class="footer_conteiner--join--contact--box--svg" width="44" height="44"
+                            viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M44 22C44 28.0751 41.5376 33.5751 37.5564 37.5564C33.5751 41.5376 28.0751 44 22 44C15.9249 44 10.4249 41.5376 6.44365 37.5564C2.46243 33.5751 0 28.0751 0 22C0 15.9249 2.46243 10.4249 6.44365 6.44365C10.4249 2.46243 15.9249 0 22 0C28.0751 0 33.5751 2.46243 37.5564 6.44365C41.5376 10.4249 44 15.9249 44 22Z"
                                 fill="white" fill-opacity="0.1" />
@@ -207,9 +248,9 @@
                             </defs>
                         </svg>
                     </div>
-                    <div class="footer_conteiner--join_contact--box">
-                        <svg class="footer_conteiner--join_contact--box--svg" width="44" height="44" viewBox="0 0 44 44"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="footer_conteiner--join--contact--box">
+                        <svg class="footer_conteiner--join--contact--box--svg" width="44" height="44"
+                            viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M44 22C44 28.0751 41.5376 33.5751 37.5564 37.5564C33.5751 41.5376 28.0751 44 22 44C15.9249 44 10.4249 41.5376 6.44365 37.5564C2.46243 33.5751 0 28.0751 0 22C0 15.9249 2.46243 10.4249 6.44365 6.44365C10.4249 2.46243 15.9249 0 22 0C28.0751 0 33.5751 2.46243 37.5564 6.44365C41.5376 10.4249 44 15.9249 44 22Z"
                                 fill="white" fill-opacity="0.1" />
@@ -218,7 +259,7 @@
                                 fill="white" />
                         </svg>
                     </div>
-                    <div class="footer_conteiner--join_contact--box">
+                    <div class="footer_conteiner--join--contact--box">
                         <svg class="footer_conteiner--join_contact--box--svg" width="44" height="44" viewBox="0 0 44 44"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -229,9 +270,9 @@
                                 fill="white" />
                         </svg>
                     </div>
-                    <div class="footer_conteiner--join_contact--box">
-                        <svg class="footer_conteiner--join_contact--box--svg" width="44" height="44" viewBox="0 0 44 44"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="footer_conteiner--join--contact--box">
+                        <svg class="footer_conteiner--join--contact--box--svg" width="44" height="44"
+                            viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M44 22C44 28.0751 41.5376 33.5751 37.5564 37.5564C33.5751 41.5376 28.0751 44 22 44C15.9249 44 10.4249 41.5376 6.44365 37.5564C2.46243 33.5751 0 28.0751 0 22C0 15.9249 2.46243 10.4249 6.44365 6.44365C10.4249 2.46243 15.9249 0 22 0C28.0751 0 33.5751 2.46243 37.5564 6.44365C41.5376 10.4249 44 15.9249 44 22Z"
                                 fill="white" fill-opacity="0.1" />
@@ -263,6 +304,8 @@
             </div>
         </div>
     </footer>
+    <script src="script.js" defer></script>
+
 </body>
 
 </html>

@@ -1,0 +1,201 @@
+@media (max-width:1000px) {
+    .header {
+        &_link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+}
+
+@media (max-width:1250px) {
+    main {
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+
+            &_card {
+                max-width: none;
+
+                &--img {
+                    max-width: none;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .ourteam {
+
+            &_title {
+                margin-bottom: 30px;
+                margin-top: 60px;
+            }
+
+            &_people {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+
+                &--conteiner {
+                    max-width: 354px;
+                }
+            }
+        }
+
+        .clients {
+
+            &_box {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 30px;
+
+                &--conteiner {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    main {
+        .aboutus {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:1130px) {
+    .footer {
+        &_conteiner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+
+            &--box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            &--join {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                grid-area: 1 / 2 / 2 / 3;
+            }
+
+            &--inp {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+                grid-area: 2 / 1 / 3 / 3;
+
+                &--box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &--input {
+
+                        max-width: 450px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:720px) {
+    body {
+
+        main {
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+}
+
+@media (max-width:800px) {
+    body {
+        main {
+            .ourteam {
+                &_title {
+                    margin-bottom: 0px;
+                }
+
+                &_people {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                }
+            }
+            .clients {
+
+                &_box {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                }
+            }
+        }
+        footer {
+
+            .footer {
+
+                &_conteiner {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 60px;
+
+                    &--box {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (max-width:850px) {
+    body {
+        header {
+            .header {
+
+                &_logo {
+
+                    &--navig {
+                        display: none;
+                    }
+                }
+
+                &_link {
+                    display: none;
+                }
+                &_burger {
+                    display: block;
+                }
+            }
+        }
+    }
+}
