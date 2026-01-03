@@ -284,7 +284,6 @@ a {
 .main_cards--card {
   max-width: 370px;
   border: 1px solid #EEE;
-  margin-top: 30px;
   position: relative;
 }
 .main_cards--card:hover {
