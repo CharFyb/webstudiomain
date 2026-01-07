@@ -579,7 +579,7 @@ a {
   }
   .main_buttons {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 50px;
     width: 100%;
@@ -591,9 +591,6 @@ a {
   }
   body .main_buttons {
     max-width: 450px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
     justify-content: start;
   }
   body .main_cards {

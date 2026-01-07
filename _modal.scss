@@ -87,12 +87,28 @@
                     gap: 12px;
                     align-items: center;
                     margin-bottom: 10px;
+                    transition: border-color 0.3s ease;
+
+                    &:has(input:focus) {
+                        border-color: #2196F3;
+
+                        .modal_body--form--box--svg {
+                            fill: #2196F3;
+                            path {
+                                fill: #2196F3;
+                            }
+                        }
+                    }
 
                     &--input {
                         width: 100%;
                         max-width: 400px;
                         border: none;
                         outline: none;
+
+                        &:focus {
+                            outline: none;
+                        }
                     }
 
                     &--svg {
